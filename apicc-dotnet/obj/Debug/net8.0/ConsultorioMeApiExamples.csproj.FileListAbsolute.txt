@@ -1,0 +1,14 @@
+C:\repos\apicc-samples\apicc-dotnet\bin\Debug\net8.0\ConsultorioMeApiExamples.exe
+C:\repos\apicc-samples\apicc-dotnet\bin\Debug\net8.0\ConsultorioMeApiExamples.deps.json
+C:\repos\apicc-samples\apicc-dotnet\bin\Debug\net8.0\ConsultorioMeApiExamples.runtimeconfig.json
+C:\repos\apicc-samples\apicc-dotnet\bin\Debug\net8.0\ConsultorioMeApiExamples.dll
+C:\repos\apicc-samples\apicc-dotnet\bin\Debug\net8.0\ConsultorioMeApiExamples.pdb
+C:\repos\apicc-samples\apicc-dotnet\obj\Debug\net8.0\ConsultorioMeApiExamples.GeneratedMSBuildEditorConfig.editorconfig
+C:\repos\apicc-samples\apicc-dotnet\obj\Debug\net8.0\ConsultorioMeApiExamples.AssemblyInfoInputs.cache
+C:\repos\apicc-samples\apicc-dotnet\obj\Debug\net8.0\ConsultorioMeApiExamples.AssemblyInfo.cs
+C:\repos\apicc-samples\apicc-dotnet\obj\Debug\net8.0\ConsultorioMeApiExamples.csproj.CoreCompileInputs.cache
+C:\repos\apicc-samples\apicc-dotnet\obj\Debug\net8.0\ConsultorioMeApiExamples.dll
+C:\repos\apicc-samples\apicc-dotnet\obj\Debug\net8.0\refint\ConsultorioMeApiExamples.dll
+C:\repos\apicc-samples\apicc-dotnet\obj\Debug\net8.0\ConsultorioMeApiExamples.pdb
+C:\repos\apicc-samples\apicc-dotnet\obj\Debug\net8.0\ConsultorioMeApiExamples.genruntimeconfig.cache
+C:\repos\apicc-samples\apicc-dotnet\obj\Debug\net8.0\ref\ConsultorioMeApiExamples.dll
