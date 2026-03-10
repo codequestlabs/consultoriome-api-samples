@@ -1,68 +1,75 @@
-# Consultorio.me API - Exemplos em .NET
+# Consultorio.me API - Examples
 
-Projeto de console que demonstra o uso de todos os endpoints da [API Consultorio.me](https://api.consultoriome.com/swagger/v1/swagger.json).
+**EN:** Console project demonstrating the use of all [Consultorio.me API](https://api.consultoriome.com/swagger/v1/swagger.json) endpoints.  
+**PT:** Projeto de console que demonstra o uso de todos os endpoints da [API Consultorio.me](https://api.consultoriome.com/swagger/v1/swagger.json).  
+**ES:** Proyecto de consola que demuestra el uso de todos los endpoints de la [API Consultorio.me](https://api.consultoriome.com/swagger/v1/swagger.json).
 
-## Pré-requisitos
+---
 
-- .NET 8.0 ou superior
+## Configuration | Configuração | Configuración
 
-## Configuração
 
-Configure as credenciais da API via variáveis de ambiente:
-
-```powershell
-$env:CONSULTORIO_CLIENT_ID = "seu_client_id"
-$env:CONSULTORIO_CLIENT_SECRET = "seu_client_secret"
-```
-
-Ou no construtor do cliente:
+**EN:** Or in the client constructor:  
+**PT:** Ou no construtor do cliente:  
+**ES:** O en el constructor del cliente:
 
 ```csharp
-var client = new ConsultorioMeApiClient("seu_client_id", "seu_client_secret");
+var client = new ConsultorioMeApiClient("your_client_id", "your_client_secret");
 ```
 
-## Executar
+---
+
+## Run | Executar | Ejecutar
 
 ```bash
 dotnet run
 ```
 
-## Endpoints implementados
+---
+
+## Implemented endpoints | Endpoints implementados | Endpoints implementados
 
 ### Auth
-| Método | Endpoint | Descrição |
-|--------|----------|-----------|
-| POST | `/v1/api/authorization/token` | Obtém token JWT (Basic Auth) |
+| Method | Endpoint | EN | PT | ES |
+|--------|----------|----|----|-----|
+| POST | `/v1/api/authorization/token` | Gets JWT token (Basic Auth) | Obtém token JWT (Basic Auth) | Obtiene token JWT (Basic Auth) |
 
 ### Appointment
-| Método | Endpoint | Descrição |
-|--------|----------|-----------|
-| GET | `/v1/api/appointment/professionals` | Lista profissionais |
-| GET | `/v1/api/appointment/professional-info/{id}` | Info do profissional |
-| GET | `/v1/api/appointment/available-times/{id}` | Horários disponíveis |
-| POST | `/v1/api/appointment/patient-list` | Lista agendamentos do paciente |
-| POST | `/v1/api/appointment/create-appointment` | Cria agendamento |
-| POST | `/v1/api/appointment/confirm/{id}/{going}` | Confirma/recusa agendamento |
-| POST | `/v1/api/appointment/cancel-appointment/{id}` | Cancela agendamento |
+| Method | Endpoint | EN | PT | ES |
+|--------|----------|----|----|-----|
+| GET | `/v1/api/appointment/professionals` | List professionals | Lista profissionais | Lista profesionales |
+| GET | `/v1/api/appointment/professional-info/{id}` | Professional info | Info do profissional | Info del profesional |
+| GET | `/v1/api/appointment/available-times/{id}` | Available times | Horários disponíveis | Horarios disponibles |
+| POST | `/v1/api/appointment/patient-list` | List patient appointments | Lista agendamentos do paciente | Lista citas del paciente |
+| POST | `/v1/api/appointment/create-appointment` | Create appointment | Cria agendamento | Crea cita |
+| POST | `/v1/api/appointment/confirm/{id}/{going}` | Confirm/decline appointment | Confirma/recusa agendamento | Confirma/rechaza cita |
+| POST | `/v1/api/appointment/cancel-appointment/{id}` | Cancel appointment | Cancela agendamento | Cancela cita |
 
 ### Messenger
-| Método | Endpoint | Descrição |
-|--------|----------|-----------|
-| GET | `/v1/api/messenger/templates/{type}` | Templates (ex: whatsapp) |
-| GET | `/v1/api/messenger/birthdays/{date}` | Aniversariantes do dia |
-| GET | `/v1/api/messenger/appointments/{date}/{messageId}` | Agendamentos para mensagens |
+| Method | Endpoint | EN | PT | ES |
+|--------|----------|----|----|-----|
+| GET | `/v1/api/messenger/templates/{type}` | Templates (e.g. whatsapp) | Templates (ex: whatsapp) | Plantillas (ej: whatsapp) |
+| GET | `/v1/api/messenger/birthdays/{date}` | Birthdays of the day | Aniversariantes do dia | Cumpleaños del día |
+| GET | `/v1/api/messenger/appointments/{date}/{messageId}` | Appointments for messaging | Agendamentos para mensagens | Citas para mensajería |
 
-## Estrutura do projeto
+---
+
+## Project structure | Estrutura do projeto | Estructura del proyecto
 
 ```
-├── Models/                 # DTOs baseados no Swagger
-├── ConsultorioMeApiClient.cs  # Cliente HTTP da API
-├── Program.cs             # Exemplos de uso
+├── Models/                    # DTOs based on Swagger | DTOs baseados no Swagger | DTOs basados en Swagger
+├── ConsultorioMeApiClient.cs  # API HTTP client | Cliente HTTP da API | Cliente HTTP de la API
+├── Program.cs                # Usage examples | Exemplos de uso | Ejemplos de uso
 └── README.md
 ```
 
-## Dependências
+---
 
-Utiliza apenas bibliotecas padrão do .NET:
+## Dependencies | Dependências | Dependencias
+
+**EN:** Uses only .NET standard libraries:  
+**PT:** Utiliza apenas bibliotecas padrão do .NET:  
+**ES:** Utiliza solo bibliotecas estándar de .NET:
+
 - `System.Net.Http` (HttpClient)
-- `System.Text.Json` (serialização JSON)
+- `System.Text.Json` (JSON serialization | serialização JSON | serialización JSON)

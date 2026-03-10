@@ -6,8 +6,8 @@
 
 import { ConsultorioMeApiClient } from './ConsultorioMeApiClient.js';
 
-const clientId = 'lKKQAYCgYZ8okwwQBXUOTMZP4vyEhgzjg0ZGbD1TfX/KuYvZq7oM8BQqU3PHJ6B3oPhIdRFwd3TTJruZDPPOrQ==';
-const clientSecret = 'dBqTtw8+gnX+sg1Xz8aNslPWeOu10en7NjGk+0oFWlFFgjzxbBIys7zxJoNAW7urmlufHe5vIB+e425sB7fZ7w==';
+const clientId = ''; // set here your client id
+const clientSecret = ''; // set here your client secret
 
 const client = new ConsultorioMeApiClient(clientId, clientSecret);
 

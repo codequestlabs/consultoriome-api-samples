@@ -12,14 +12,7 @@ Console project demonstrating usage of all [Consultorio.me API](https://api.cons
 
 ### Configuration
 
-Configure API credentials via environment variables:
-
-```powershell
-$env:CONSULTORIO_CLIENT_ID = "your_client_id"
-$env:CONSULTORIO_CLIENT_SECRET = "your_client_secret"
-```
-
-Or in the client constructor:
+Configure API credentials in the client constructor:
 
 ```javascript
 const client = new ConsultorioMeApiClient("your_client_id", "your_client_secret");
