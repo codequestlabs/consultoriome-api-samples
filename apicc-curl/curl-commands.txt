@@ -1,0 +1,79 @@
+# =============================================================================
+# Consultorio.me API - Individual curl commands (EN | PT | ES)
+# Replace YOUR_CLIENT_ID, YOUR_CLIENT_SECRET, YOUR_TOKEN, ID, etc.
+# =============================================================================
+
+BASE_URL=https://api.consultoriome.com
+
+# --- 1. AUTH: Get token (Basic Auth) ---
+curl -X POST "${BASE_URL}/v1/api/authorization/token" \
+  -u "YOUR_CLIENT_ID:YOUR_CLIENT_SECRET" \
+  -H "Accept: application/json"
+
+# --- 2. APPOINTMENT: List professionals (Bearer) ---
+curl -X GET "${BASE_URL}/v1/api/appointment/professionals" \
+  -H "Authorization: Bearer YOUR_TOKEN" \
+  -H "Accept: application/json"
+
+# --- 3. APPOINTMENT: Professional info ---
+curl -X GET "${BASE_URL}/v1/api/appointment/professional-info/PROFESSIONAL_ID" \
+  -H "Authorization: Bearer YOUR_TOKEN" \
+  -H "Accept: application/json"
+
+# --- 4. APPOINTMENT: Available times ---
+curl -X GET "${BASE_URL}/v1/api/appointment/available-times/PROFESSIONAL_ID" \
+  -H "Authorization: Bearer YOUR_TOKEN" \
+  -H "Accept: application/json"
+
+# --- 5. APPOINTMENT: Patient list ---
+curl -X POST "${BASE_URL}/v1/api/appointment/patient-list" \
+  -H "Authorization: Bearer YOUR_TOKEN" \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -d '{"phone":"11971006053","document":"00000000191"}'
+
+# --- 6. APPOINTMENT: Create appointment ---
+curl -X POST "${BASE_URL}/v1/api/appointment/create-appointment" \
+  -H "Authorization: Bearer YOUR_TOKEN" \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -d '{
+    "proId":"PROFESSIONAL_ID",
+    "dateTime":"2025-03-10T14:00:00.000Z",
+    "timeSlotId":1,
+    "name":"Sample Patient",
+    "phone1":"11971006053",
+    "phone2":"",
+    "email":"patient@example.com",
+    "document":"00000000191",
+    "responsibleName":"Sample Patient",
+    "appointmentType":"Consulta",
+    "observation":"",
+    "validationMessage":""
+  }'
+
+# --- 7. APPOINTMENT: Confirm appointment ---
+curl -X POST "${BASE_URL}/v1/api/appointment/confirm/APPOINTMENT_ID/yes" \
+  -H "Authorization: Bearer YOUR_TOKEN" \
+  -H "Accept: application/json"
+# going: "yes" to confirm, "no" to decline
+
+# --- 8. APPOINTMENT: Cancel appointment ---
+curl -X POST "${BASE_URL}/v1/api/appointment/cancel-appointment/APPOINTMENT_ID" \
+  -H "Authorization: Bearer YOUR_TOKEN" \
+  -H "Accept: application/json"
+
+# --- 9. MESSENGER: Templates ---
+curl -X GET "${BASE_URL}/v1/api/messenger/templates/whatsapp" \
+  -H "Authorization: Bearer YOUR_TOKEN" \
+  -H "Accept: application/json"
+
+# --- 10. MESSENGER: Birthdays ---
+curl -X GET "${BASE_URL}/v1/api/messenger/birthdays/2025-03-09" \
+  -H "Authorization: Bearer YOUR_TOKEN" \
+  -H "Accept: application/json"
+
+# --- 11. MESSENGER: Appointments for messaging ---
+curl -X GET "${BASE_URL}/v1/api/messenger/appointments/2025-03-09/0" \
+  -H "Authorization: Bearer YOUR_TOKEN" \
+  -H "Accept: application/json"
