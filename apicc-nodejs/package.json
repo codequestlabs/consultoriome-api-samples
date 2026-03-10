@@ -1,0 +1,13 @@
+{
+  "name": "consultorio-me-api-examples",
+  "version": "1.0.0",
+  "description": "Consultorio.me API usage examples - Node.js",
+  "type": "module",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
